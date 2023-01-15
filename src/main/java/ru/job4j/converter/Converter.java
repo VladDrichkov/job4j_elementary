@@ -3,17 +3,15 @@ package ru.job4j.converter;
 public class Converter {
 
     public static float rubleToEuro(float value) {
-        float rsl = value / 70;
-        return rsl;
+        return value / 70;
     }
 
     public static float rubleToDollar(float value) {
-        float rsl = value / 60;
-        return rsl;
+        return value / 60;
     }
 
     public static boolean isEquals(float value1, float value2, float threshold) {
-        return (Math.abs(value1 - value2) < threshold);
+        return Math.abs(value1 - value2) < threshold;
     }
 
     public static void main(String[] args) {
@@ -29,10 +27,10 @@ public class Converter {
         boolean passed = expected == out;
         System.out.println("Test result: " + passed);
 
-        float expectedDollarsValue = 2.3333F;
-        float outDollarValue = Converter.rubleToDollar(in);
+        expected = 2.3333F;
+        out = Converter.rubleToDollar(in);
         final float EPSILON = 0.001f;
-        passed = isEquals(expectedDollarsValue, outDollarValue, EPSILON);
+        passed = isEquals(expected, out, EPSILON);
         System.out.println("Test converter rubleToDollar: " + passed);
     }
 }

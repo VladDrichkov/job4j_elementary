@@ -4,9 +4,9 @@ public class ChessBoard {
     public static int way(int x1, int y1, int x2, int y2) {
         int rsl = 0;
         if (isValid(x1) && isValid(x2) && isValid(y1) && isValid(y2)) {
-            int shiftX = Math.abs(x2 - x1);
-            int shiftY = Math.abs(y2 - y1);
-            rsl = shiftX == shiftY ? shiftX : rsl;
+            if (Math.abs(x2 - x1) == Math.abs(y2 - y1)) {
+                rsl = Math.abs(x2 - x1);
+            }
         }
         return rsl;
     }

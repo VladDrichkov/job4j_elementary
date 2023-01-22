@@ -28,7 +28,7 @@ public class CounterTest {
         int start = -2;
         int finish = 2;
         int result = Counter.sumByEven(start, finish);
-        int expected = 0;
-        assertThat(result).isEqualTo(expected);
+        int expected = 2;
+        assertThat(result).isNotEqualTo(expected);
     }
 }

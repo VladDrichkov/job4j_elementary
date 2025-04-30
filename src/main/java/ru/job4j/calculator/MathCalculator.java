@@ -13,11 +13,11 @@ public class MathCalculator {
     }
 
     public static double sumMultiplySubDiv(double first, double second) {
-        return sum(first, second) + multiply(first, second) +
-                subtraction(first, second) + division(first, second);
+        return sum(first, second) + multiply(first, second)
+                + subtraction(first, second) + division(first, second);
     }
 
     public static void main(String[] args) {
-        System.out.println("Результат:" + sumAndMultiply(10,20));
+        System.out.println("Результат:" + sumAndMultiply(10, 20));
     }
 }

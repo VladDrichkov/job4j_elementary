@@ -1,8 +1,10 @@
 package ru.job4j;
 
 import org.junit.jupiter.api.Test;
-import static org.assertj.core.api.Assertions.assertThat;
+
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.assertj.core.api.BDDAssertions.withPrecision;
+import static org.junit.jupiter.api.Assertions.*;
 
 class ConverterTest {
 
@@ -11,7 +13,7 @@ class ConverterTest {
         double input = 180;
         double expected = 2;
         double output = Converter.rubleToEuro(input);
-        double value = 0.0001;
+        double value = 0.0001f;
         assertThat(output).isEqualTo(expected, withPrecision(value));
     }
 

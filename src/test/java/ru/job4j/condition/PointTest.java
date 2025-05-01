@@ -22,7 +22,7 @@ class PointTest {
     }
 
     @Test
-    void  whenPointsMinus2Minus2And2And2Then5Dot66 () {
+    void  whenPointsMinus2Minus2And2And2Then5Dot66() {
         int x1 = -2, y1 = -2, x2 = 2, y2 = 2;
         double expected = 5.66;
         double output = Point.distance(x1, y1, x2, y2);

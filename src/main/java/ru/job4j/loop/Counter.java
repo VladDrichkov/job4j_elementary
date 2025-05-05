@@ -18,12 +18,4 @@ public class Counter {
         }
         return sum;
     }
-
-    public static void main(String[] args) {
-        /*System.out.println(sum(0, 5));
-        System.out.println(sum(0, 10));
-        System.out.println(sum(3, 8));
-        System.out.println(sum(1, 1));*/
-        System.out.println(sumByEven(-2, 10));
-    }
 }

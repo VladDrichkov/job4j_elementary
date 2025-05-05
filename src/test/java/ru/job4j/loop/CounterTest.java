@@ -31,4 +31,31 @@ class CounterTest {
         int output = Counter.sum(start, finish);
         assertThat(output).isEqualTo(expected);
     }
+
+    @Test
+    void whenSumEvenNumbersFromOneToTenThenThirty() {
+        int start = 1;
+        int finish = 10;
+        int expected = 30;
+        int output = Counter.sumByEven(start, finish);
+        assertThat(output).isEqualTo(expected);
+    }
+
+    @Test
+    void whenSumEvenNumbersFrom2To10Then30() {
+        int start = 2;
+        int finish = 10;
+        int expected = 30;
+        int output = Counter.sumByEven(start, finish);
+        assertThat(output).isEqualTo(expected);
+    }
+
+    @Test
+    void whenSumEvenNumbersFromMinus2To10Then28() {
+        int start = -2;
+        int finish = 10;
+        int expected = 28;
+        int output = Counter.sumByEven(start, finish);
+        assertThat(output).isEqualTo(expected);
+    }
 }

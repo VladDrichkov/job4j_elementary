@@ -11,10 +11,4 @@ public class CheckPrimeNumber {
         }
         return result;
     }
-
-    public static void main(String[] args) {
-        int number = 3;
-
-        System.out.println(number + " :" + check(number));
-    }
 }

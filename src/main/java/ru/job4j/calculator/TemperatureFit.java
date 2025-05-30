@@ -12,10 +12,10 @@ public class TemperatureFit {
 
     public static void main(String[] args) {
         int temperature = 10;
-        double fruitsTemp = TemperatureFit.idealTemperatureForFruits(temperature);
-        double meatTemp = TemperatureFit.idealTemperatureForMeat(temperature);
-        System.out.println("Ideal temperature for fruits is " + fruitsTemp + "°C");
-        System.out.println("Ideal temperature for meat is " + meatTemp + "°C");
+        double fruits = TemperatureFit.idealTemperatureForFruits(temperature);
+        double meat = TemperatureFit.idealTemperatureForMeat(temperature);
+        System.out.println("Ideal temperature for fruits is " + fruits + "°C");
+        System.out.println("Ideal temperature for meat is " + meat + "°C");
     }
 }
 

@@ -1,16 +1,17 @@
 package ru.job4j.loop;
 
 public class Frame {
+
     public static void draw(int size) {
         for (int row = 0; row < size; row++) {
             for (int col = 0; col < size; col++) {
-                boolean isTopOrBottomBorder = row == 0 || row == size - 1;
-                boolean isSideBorder = col == 0 || col == size - 1;
-                if (isTopOrBottomBorder && isSideBorder) {
+                boolean isTopOrBottom = row == 0 || row == size - 1;
+                boolean isSide = col == 0 || col == size - 1;
+                if (isTopOrBottom && isSide) {
                     System.out.print("+");
-                } else if (isTopOrBottomBorder) {
+                } else if (isTopOrBottom) {
                     System.out.print("-");
-                } else if (isSideBorder) {
+                } else if (isSide) {
                     System.out.print("|");
                 } else {
                     System.out.print(" ");

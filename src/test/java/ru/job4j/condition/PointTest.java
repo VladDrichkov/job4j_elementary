@@ -11,7 +11,7 @@ class PointTest {
         Point secondPoint = new Point(2, 0);
         double expected = 2.0;
         double output = firstPoint.distance(secondPoint);
-        assertThat(output).isEqualTo(expected, withPrecision(0.01));
+        assertThat(output).isCloseTo(expected, within(0.01));
     }
 
     @Test
@@ -20,7 +20,7 @@ class PointTest {
         Point secondPoint = new Point(1, 1);
         double expected = 2.83;
         double output = firstPoint.distance(secondPoint);
-        assertThat(output).isEqualTo(expected, withPrecision(0.01));
+        assertThat(output).isCloseTo(expected, within(0.01));
     }
 
     @Test
@@ -29,6 +29,6 @@ class PointTest {
         Point secondPoint = new Point(2, 2);
         double expected = 5.66;
         double output = firstPoint.distance(secondPoint);
-        assertThat(output).isEqualTo(expected, withPrecision(0.01));
+        assertThat(output).isEqualTo(expected, within(0.01));
     }
 }

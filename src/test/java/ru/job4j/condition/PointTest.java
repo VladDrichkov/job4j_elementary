@@ -31,4 +31,43 @@ class PointTest {
         double output = firstPoint.distance(secondPoint);
         assertThat(output).isEqualTo(expected, within(0.01));
     }
+
+    @Test
+    void whenPointsIn3DThenCalculateDistance() {
+        Point a = new Point(0, 0, 0);
+        Point b = new Point(1, 1, 1);
+        double result = a.distance3d(b);
+        assertThat(result).isCloseTo(1.732, within(0.001));
+    }
+
+    @Test
+    void whenSamePointIn3DThenDistanceZero() {
+        Point a = new Point(2, 3, 5);
+        double result = a.distance3d(a);
+        assertThat(result).isEqualTo(0);
+    }
+
+    @Test
+    void whenPointsOnZAxisThenDistance() {
+        Point a = new Point(0, 0, 0);
+        Point b = new Point(0, 0, 5);
+        double result = a.distance3d(b);
+        assertThat(result).isEqualTo(5);
+    }
+
+    @Test
+    void whenNegativeCoordinatesIn3DThenDistance() {
+        Point a = new Point(-1, -2, -3);
+        Point b = new Point(-4, -5, -6);
+        double result = a.distance3d(b);
+        assertThat(result).isCloseTo(5.196, within(0.001));
+    }
+
+    @Test
+    void whenOnePointIsOriginThenDistance() {
+        Point origin = new Point(0, 0, 0);
+        Point p = new Point(3, 4, 0);
+        double result = origin.distance3d(p);
+        assertThat(result).isEqualTo(5);
+    }
 }
